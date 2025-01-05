@@ -1,0 +1,79 @@
+ 
+* { box-sizing: border-box; }
+
+body { font: 'Open Sans' sans-serif; }
+
+.line { width: 100%;
+    display: block;
+    /* margin-top: 1rem; */
+    margin-bottom: 1rem;
+    border: 0;
+    border-top-color: currentcolor;
+    border-top-style: none;
+    border-top-width: 0px;
+    border-top: 2px solid #f0eaea; /* 1px solid #eee; */
+}
+
+/*the container must be positioned relative:*/
+.autocomplete { position: relative; display: inline-block;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+ 
+}
+
+.autocomplete-content {
+ position: absolute;
+  /* border: 1px solid #d4d4d4; */
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;  
+  width: 93%;
+  padding-left: 15px;
+  
+}
+.autocomplete-content li:hover { background-color: #e9e9e9; }
+.autocomplete-content li {
+	border: 1px solid #d4d4d4;
+	border-top: 1px solid #d4d4d4; 
+  	border-bottom: 1px solid #d4d4d4; 
+  	background-color: #fff; 
+   	/* height: 100%; */
+   	padding: 10px 10px 10px 10px;
+   	
+}
+.dropdown-content ul{
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
